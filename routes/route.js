@@ -9,7 +9,8 @@ import {
     addtime,
     listartime,
     filtrartime,
-    addjogador,
+    abreaddjog
+
 } from '../controllers/controller.js'
 router.get('/', home)
 //time
@@ -17,17 +18,17 @@ router.get('/', home)
 router.get('/admin/time/add', abreaddtime)
 router.post('/admin/time/add', addtime)
 //rotas do modelo time (read)
-
 router.get('/admin/time/lst', listartime)
 router.post('/admin/time/lst', filtrartime)
 //rota do modelo time (delete)
-
 router.get('/admin/time/del/:id', deletatime)
 //rota do modelo time (editar)
 router.get('/admin/time/edt/:id', abreedttime)
 router.post('/admin/time/edt/:id', edttime)
 
+//Jogador
+router.get('/admin/jogador/add', abreaddjog)
+router.post('/admin/jogador/add', addjogador)
 //rota para adicionar jogador
-router.get('/admin/time/jogador/:id', addjogador)
-router.post('/admin/time/jogador/:id', addjogador)
+
 export default router
