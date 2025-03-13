@@ -9,7 +9,13 @@ import {
     addtime,
     listartime,
     filtrartime,
-    abreaddjog
+    abreaddjogador,
+    addjogador,
+    listarjogador,
+    filtrajogador,
+    deletajogador,
+    abreedtjogador,
+    edtjogador,
 
 } from '../controllers/controller.js'
 router.get('/', home)
@@ -17,18 +23,35 @@ router.get('/', home)
 //create do modelo time (create)
 router.get('/admin/time/add', abreaddtime)
 router.post('/admin/time/add', addtime)
+
 //rotas do modelo time (read)
 router.get('/admin/time/lst', listartime)
 router.post('/admin/time/lst', filtrartime)
+
 //rota do modelo time (delete)
 router.get('/admin/time/del/:id', deletatime)
+
 //rota do modelo time (editar)
 router.get('/admin/time/edt/:id', abreedttime)
 router.post('/admin/time/edt/:id', edttime)
 
+
 //Jogador
-router.get('/admin/jogador/add', abreaddjog)
+
+//create do modelo jogador (create)
+router.get('/admin/jogador/add', abreaddjogador)
 router.post('/admin/jogador/add', addjogador)
-//rota para adicionar jogador
+
+//rotas do modelo jogador (read)
+router.get('/admin/jogador/lst', listarjogador)
+router.post('/admin/jogador/lst', filtrajogador)
+
+//rota do modelo jogador (delete)
+router.get('/admin/jogador/del/:id', deletajogador)
+
+//rota do modelo jogador (editar)
+router.get('/admin/jogador/edt/:id', abreedtjogador)
+router.post('/admin/jogador/edt/:id', edtjogador)
+
 
 export default router
